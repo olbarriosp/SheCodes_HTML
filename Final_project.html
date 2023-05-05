@@ -1,0 +1,161 @@
+<html>
+  <!--- Title page --->
+
+  <title>Swimming doing</title>
+  <!--- Style text--->
+  <style>
+    .center-text {
+      background: linear-gradient(
+        109.6deg,
+        rgba(86, 85, 163) 50%,
+        rgb(8, 76, 83) 18.1%
+      );
+      text-align: center;
+      font-family: Helvetica, Arial, sans-serif;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 30px 60px;
+      border-radius: 8px;
+    }
+    .firstTitle {
+      color: whitesmoke;
+    }
+
+    .parr-principal {
+      color: rgb(206, 216, 216);
+      text-align: center;
+      font-size: 12px;
+    }
+    .ref_olympics {
+      color: rgb(206, 216, 216);
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      margin: 7px auto;
+      background: #0b95c7;
+      color: white;
+      font-size: 12px;
+      padding: 10px 10px;
+      border: none;
+      table-layout: fixed;
+      border-radius: 8px;
+      border-collapse: collapse;
+      box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+      transition: all 100ms ease-in-out;
+    }
+
+    button:hover {
+      color: #fff;
+      background: rgb(8, 76, 83);
+      border: 1.5px solid rgb(8, 76, 83);
+      cursor: pointer;
+    }
+    .Firma {
+      font-size: 8px;
+      opacity: 0.6;
+      font-family: monospace;
+    }
+    img {
+      display: block;
+      margin: 40px auto;
+      border-radius: 50px;
+      box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+    }
+    span {
+      font-weight: bold;
+    }
+  </style>
+  <!--- Body page --->
+
+  <div class="center-text">
+    <h1 class="firstTitle">
+      LOVING TO SWIMING
+      <br />
+      YOU CAN
+      <br />
+      <img
+        src="https://i0.wp.com/blog.myswimpro.com/wp-content/uploads/2019/06/myswimpro-freestyle-taylor-05.png?fit=1536%2C862&ssl=1"
+        width="200"
+      />
+    </h1>
+    <hr />
+    <p class="parr-principal">
+      You can find <span>different styles of swim</span>, that depent what topic
+      you want to effort. Swimming is the one or most important deport of
+      <a
+        class="ref_olympics"
+        href="https://olympics.com/en/sports/"
+        target="_blank"
+      >
+        The Olympic games
+      </a>
+      with Basketball, Boxin, and others.
+    </p>
+    <br />
+    <p class="parr-principal">Some of the styles are:</p>
+    <ul>
+      <il> <button class="Freestyle">Freestyle</button></il>
+      <il> <button class="Brackstroke">Brackstroke</button></il>
+      <il> <button class="Breaststroke">Breaststroke</button></il>
+    </ul>
+    <br />
+
+    <hr />
+    <p class="Firma">Coded by Olga Barrios 🤓</p>
+  </div>
+
+  <!--- Script code --->
+  <script>
+    function infoPersonal(text) {
+      let name = prompt("What is your name?");
+      let email = prompt("What is your email address?");
+      alert(
+        "Hi " +
+          name +
+          "! you are interested about this style, we send you more info at email ! 📧 Happy" +
+          text +
+          " swimming 🐟"
+      );
+    }
+    function ageSwim() {
+      let age = prompt("How old are you?");
+      if (age < 18) {
+        alert("Swim with an adult nearby  by your security!");
+      } else {
+        if ((age >= 18) & (age <= 50)) {
+          alert("You can swim alone if you know!");
+        } else {
+          alert("You must consult with your doctor!");
+        }
+      }
+    }
+    //acción para Brackstroke
+    function brackstroke() {
+      text = "Brackstroke";
+      infoPersonal(text);
+      ageSwim();
+    }
+    let brackstrokeButton = document.querySelector(".Brackstroke");
+    brackstrokeButton.addEventListener("click", brackstroke);
+
+    //acción para Freestyle
+    function freestyle() {
+      text = "Freestyle";
+      infoPersonal(text);
+      ageSwim();
+    }
+    let freestyleButton = document.querySelector(".Freestyle");
+    freestyleButton.addEventListener("click", freestyle);
+
+    //acción para Breaststroke
+    function breaststroke() {
+      text = "Breaststroke";
+      infoPersonal(text);
+      ageSwim();
+    }
+    let breaststrokeButton = document.querySelector(".Breaststroke");
+    breaststrokeButton.addEventListener("click", breaststroke);
+  </script>
+</html>
